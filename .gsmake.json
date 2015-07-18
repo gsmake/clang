@@ -1,0 +1,31 @@
+{
+    "name":"github.com/gsmake/clang",
+
+    "domain":"task|clang",
+
+    "import":[
+       {"name":"github.com/gsdocker/gs2c","domain":"task","version":"release/v3.0"}
+    ],
+
+    "task":{
+        "compile":{
+            "domain":"all|clang",
+            "description" : "compile c/c++/object-c sources"
+        },
+
+        "test":{
+            "prev":"compile",
+            "domain":"all|clang",
+            "description" : "run clang test"
+        }
+    },
+
+    "properties":{
+        "clang":{
+            "testing" :{
+                "type":"static|shared",
+                "srcroot":"src/testing",zhi
+            }
+        }
+    }
+}
